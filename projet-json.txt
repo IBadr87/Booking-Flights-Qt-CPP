@@ -1,0 +1,405 @@
+Customer
+
+- post /Customer/
+json
+	{
+		"Passport_ID" : "string",
+		"LastName" : "string",
+		"FirstName" : "string",
+		"Email" : "string",
+		"Telephone" : "string",
+	}
+
+
+- get /Customer/all
+json 
+{
+    "data":
+    [
+        {
+            {
+				"Customer_ID" : intger,
+				"FirstName" : "string",
+				"LastName" : "string",
+			},
+
+            {
+				"Customer_ID" : intger,
+				"FirstName" : "string",
+				"LastName" : "string",
+			}
+        }
+    ]
+}
+
+- get /Customer/"Customer_ID"
+json
+
+	{
+		"Customer_ID" : intger,
+		"Passport_ID" : "string",
+		"LastName" : "string",
+		"FirstName" : "string",
+		"Email" : "string",
+		"Telephone" : "string",
+	}
+
+
+- put /Customer/
+json
+
+	{
+		"Customer_ID" : intger,
+		"Passport_ID" : "string",
+		"LastName" : "string",
+		"FirstName" : "string",
+		"Email" : "string",
+		"Telephone" : "string",
+	}
+
+
+- Delete /Customer/"Customer_ID"
+json
+
+	{
+		"result":200
+	}
+
+
+Reservation
+
+- post /Reservation/
+json 
+	{
+		"Customer_ID" : "intger",
+		"Flight_ID" : "intger",
+		"Seats_ID" : "intger",
+		"FistNamePassenger" : "string",
+		"LastNamePassenger" : "string",
+		"ReservationTime" : "string",
+		"ReservationCancellation" : "string",
+		"NumberSeat" : "string",
+	}
+
+
+- get /Reservation/Flight/"Flight_ID"
+json
+{
+    "Flights" :
+            {
+                "Flight_ID" : intger,
+                "Company_ID" : intger,
+				"Plane_ID" : intger,
+                "DepartureCity" : "string",
+                "ArrivalCity" : "string",
+                "DepartureDate" : "string",
+                "DepartureTime" : "string",
+                "ArrivalDate" : "string",
+                "ArrivalTime" : "string",
+            },
+
+    "allReservation" :
+    [
+        {
+			"Customer" :
+
+				{
+					"Customer_ID" : intger,
+					"Passport_ID" : "string",
+					"LastName" : "string",
+					"FirstName" : "string",
+					"Email" : "string",
+					"Telephone" : "string",
+				},
+				
+				"Reservations":
+				[
+					{
+						"Seats_ID" : "intger",
+						"UUID" : "string",
+						"FistNamePassenger" : "string",
+						"LastNamePassenger" : "string",
+						"ReservationTime" : "string",
+						"ReservationCancellation" : "string",
+						"NumberSeat" : "string",
+					},
+
+					{
+						"Seats_ID" : "intger",
+						"UUID" : "string",
+						"FistNamePassenger" : "string",
+						"LastNamePassenger" : "string",
+						"ReservationTime" : "string",
+						"ReservationCancellation" : "string",
+						"NumberSeat" : "string",
+					}
+				]
+        },
+		
+		{
+			"Customer" :
+
+				{
+					"Customer_ID" : intger,
+					"Passport_ID" : "string",
+					"LastName" : "string",
+					"FirstName" : "string",
+					"Email" : "string",
+					"Telephone" : "string",
+				},
+				
+				"Reservations":
+				[
+					{
+						"Seats_ID" : "intger",
+						"UUID" : "string",
+						"FistNamePassenger" : "string",
+						"LastNamePassenger" : "string",
+						"ReservationTime" : "string",
+						"ReservationCancellation" : "string",
+						"NumberSeat" : "string",
+					},
+
+					{
+						"Seats_ID" : "intger",
+						"UUID" : "string",
+						"FistNamePassenger" : "string",
+						"LastNamePassenger" : "string",
+						"ReservationTime" : "string",
+						"ReservationCancellation" : "string",
+						"NumberSeat" : "string",
+					}
+				]
+        }                  
+    ]
+}
+
+
+- get /reservation/Customer/"Customer_ID"
+json
+{	
+	[
+		{
+			"Flights" :
+					{
+						"Flight_ID" : intger,
+						"Company_ID" : intger,
+						"Plane_ID" : intger,
+						"DepartureCity" : "string",
+						"ArrivalCity" : "string",
+						"DepartureDate" : "string",
+						"DepartureTime" : "string",
+						"ArrivalDate" : "string",
+						"ArrivalTime" : "string",
+					},
+					
+			"Reservations":
+					[
+						{
+							"Seats_ID" : "intger",
+							"UUID" : "string",
+							"FistNamePassenger" : "string",
+							"LastNamePassenger" : "string",
+							"ReservationTime" : "string",
+							"ReservationCancellation" : "string",
+							"NumberSeat" : "string",
+						},
+
+						{
+							"Seats_ID" : "intger",
+							"UUID" : "string",
+							"FistNamePassenger" : "string",
+							"LastNamePassenger" : "string",
+							"ReservationTime" : "string",
+							"ReservationCancellation" : "string",
+							"NumberSeat" : "string",
+						}
+					]
+		},
+		
+		{
+			"Flights" :
+					{
+						"Flight_ID" : intger,
+						"Company_ID" : intger,
+						"Plane_ID" : intger,
+						"DepartureCity" : "string",
+						"ArrivalCity" : "string",
+						"DepartureDate" : "string",
+						"DepartureTime" : "string",
+						"ArrivalDate" : "string",
+						"ArrivalTime" : "string",
+					},
+					
+			"Reservations":
+					[
+						{
+							"Seats_ID" : "intger",
+							"UUID" : "string",
+							"FistNamePassenger" : "string",
+							"LastNamePassenger" : "string",
+							"ReservationTime" : "string",
+							"ReservationCancellation" : "string",
+							"NumberSeat" : "string",
+						},
+
+						{
+							"Seats_ID" : "intger",
+							"UUID" : "string",
+							"FistNamePassenger" : "string",
+							"LastNamePassenger" : "string",
+							"ReservationTime" : "string",
+							"ReservationCancellation" : "string",
+							"NumberSeat" : "string",
+						}
+					]
+		}
+	]
+}
+	
+- put /Reservation/Flight/
+json
+	{
+		"Reservation_ID" : "intger",
+		"UUID" : "string",
+		"Customer_ID" : "intger",
+		"Flight_ID" : "intger",
+		"ReservationTime" : "string",
+		"ReservationCancellation" : "string",
+		"NumberSeat" : "string",
+	}
+	
+- Delete /Reservation/"Flight_ID"
+json
+	{
+		"result":200
+	}
+	
+	
+Plane
+- get /Plane/all
+json 
+{
+    "allPlane":
+    [
+        {
+            {
+				"Plane_ID" : intger,
+				"Model" : "string",
+				"SeatRow" : "intger",
+				"SeatColumn" : "intger",
+				"AcquisitionDate" : "string",
+			},
+
+            {
+				"Plane_ID" : intger,
+				"Model" : "string",
+				"SeatRow" : "intger",
+				"SeatColumn" : "intger",
+				"AcquisitionDate" : "string",
+			}
+        }
+    ]
+}
+
+- get /Plane/"Plane_ID"
+json
+
+	{
+		"Plane_ID" : intger,
+		"Model" : "string",
+		"SeatRow" : "intger",
+		"SeatColumn" : "intger",
+		"AcquisitionDate" : "string",
+	}
+	
+
+Company
+- get /Company/all
+json 
+{
+    "allCompany":
+    [
+        {
+            {
+				"Company_ID" : intger,
+				"NameCompany" : "string",
+			},
+
+            {
+				"Company_ID" : intger,
+				"NameCompany" : "string",
+			}
+        }
+    ]
+}
+
+- get /Company/"Company_ID"
+json
+
+	{
+		"Company_ID" : intger,
+		"NameCompany" : "string",
+	}
+	
+	
+Flights
+- get /Flights/all
+json 
+{
+    "allFlights":
+    [
+        {
+            {
+				"Flights_ID" : intger,
+				"Company_ID" : intger,
+				"Plane_ID" : intger,
+				"Model" : "string",
+				"SeatRow" : "intger",
+				"SeatColumn" : "intger",
+				"AcquisitionDate" : "string",
+				"DepartureCity" : "string"
+				"ArrivalCity" : "string",
+				"DepartureDate" : string,
+				"DepartureTime" : string,
+				"ArrivalDate" : string,
+				"ArrivalTime" : string,
+			},
+
+            {
+				"Flights_ID" : intger,
+				"Company_ID" : intger,
+				"Plane_ID" : intger,
+				"Model" : "string",
+				"SeatRow" : "intger",
+				"SeatColumn" : "intger",
+				"AcquisitionDate" : "string",
+				"DepartureCity" : "string"
+				"ArrivalCity" : "string",
+				"DepartureDate" : string,
+				"DepartureTime" : string,
+				"ArrivalDate" : string,
+				"ArrivalTime" : string,
+			}
+        }
+    ]
+}
+
+- get /Flights/"Flight_ID"
+json
+
+		{
+			"Flights_ID" : intger,
+			"Company_ID" : intger,
+			"Plane_ID" : intger,
+			"Model" : "string",
+            "SeatRow" : "intger",
+			"SeatColumn" : "intger",
+			"AcquisitionDate" : "string",
+			"DepartureCity" : "string"
+			"ArrivalCity" : "string",
+			"DepartureDate" : string,
+			"DepartureTime" : string,
+			"ArrivalDate" : string,
+			"ArrivalTime" : string,
+		}
